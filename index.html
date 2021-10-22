@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script defer
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&language=en&key=AIzaSyD61CGRsenVDXkRMrBzxQnVTtL7EZz0k_c">
+    </script>
+</head>
+<body>
+<div class="shops-box">
+    <div class="shops-box__left">
+        <div class="shops-title">
+            <span></span>
+        </div>
+
+        <form action="!" class="form-local" id="formDestination">
+            <input type="text" class="form-local__input" id="fromPlaces" placeholder="" value="" >
+
+            <button type="submit" class="button-form-local" id="submitDestination">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.868 12.6481L9.64683 9.21081C10.475 8.20066 10.9288 6.92968 10.9288 5.60654C10.9288 2.51514 8.47744 0 5.46441 0C2.45138 0 0 2.51514 0 5.60654C0 8.69794 2.45138 11.2131 5.46441 11.2131C6.59555 11.2131 7.67346 10.863 8.59505 10.1985L11.8407 13.6619C11.9763 13.8065 12.1588 13.8862 12.3543 13.8862C12.5394 13.8862 12.715 13.8138 12.8483 13.6821C13.1315 13.4026 13.1405 12.9389 12.868 12.6481ZM5.46441 1.46258C7.69152 1.46258 9.50333 3.32151 9.50333 5.60654C9.50333 7.89157 7.69152 9.7505 5.46441 9.7505C3.23731 9.7505 1.4255 7.89157 1.4255 5.60654C1.4255 3.32151 3.23731 1.46258 5.46441 1.46258Z" fill="black"/>
+                </svg>
+            </button>
+        </form>
+
+        <div id="result" style="display: none" ></div>
+
+        <div class="shops-box__place">
+            <div class="place-selection">
+                <div class="place-list">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shops-box__right">
+        <div class="map" id="MyMap"></div>
+
+        <div class="wrapper" style="display: none">
+            <div class="data-box">
+                <div id="resultDistance" class="box"></div>
+                <div id="resultDuration" class="box"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="location.js"></script>
+</body>
+</html>
